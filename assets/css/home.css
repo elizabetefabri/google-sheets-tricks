@@ -1,14 +1,16 @@
-/* home-grid.css | versão otimizada para alinhamento 100% e responsividade fluida */
-
 .main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
   width: 100%;
-  max-width: 100%;
+  max-width: 90rem; /* evita grid se espalhar demais */
   margin: 2rem auto;
   padding: 0 2rem;
 }
+
 
 .section {
   width: 100%;
@@ -40,15 +42,32 @@
   margin-bottom: 0.6rem;
 }
 
-.section__link {
+.section__btn-link {
+  background: none;
+  border: none;
   color: var(--subtitle-color);
   font-weight: bold;
-  font-size: 0.95rem;
-  text-decoration: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s ease, transform 0.15s ease;
 }
 
-.section__link:hover {
-  text-decoration: underline;
+.section__btn-link:hover {
+  background: linear-gradient(90deg, var(--subtitle-color) 0%, #ffb3c1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: translateX(3px);
+}
+
+.section__btn-link:focus {
+  outline: none;
+}
+
+.section__btn-link:active {
+  transform: scale(0.98);
 }
 
 @media (min-width: 69rem) {
