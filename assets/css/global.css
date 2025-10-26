@@ -1,0 +1,118 @@
+:root {
+  --white: #ffffff;
+  --background: #fafafa;
+  --header-bg: #f3dfd2;
+  --title-color: #51637a;
+  --subtitle-color: #eb7e98;
+  --text-color: #37435a;
+  --card-border: #e6b8af;
+  --footer-bg: #f3dfd2;
+  --green-light: #b7e1cd;
+  --yellow: #ffe599;
+  --orange: #f4a261;
+  --red-medium: #e06666;
+
+  --radius: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--header-bg);
+  color: var(--title-color);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--card-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header__title {
+  font-size: 1.8rem;
+  color: var(--title-color);
+}
+
+.header__description {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.main {
+  flex: 1;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.section {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.section:hover {
+  transform: translateY(-3px);
+}
+
+.section__subtitle {
+  color: var(--subtitle-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.section__text {
+  color: var(--text-color);
+  margin-bottom: 0.6rem;
+}
+
+.section__link {
+  color: var(--subtitle-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section__link:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: var(--footer-bg);
+  border: 1px solid var(--card-border);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.footer span {
+  font-weight: 600;
+  color: var(--subtitle-color);
+}
+
+@media (max-width: 600px) {
+  .header__title {
+    font-size: 1.4rem;
+  }
+
+  .main {
+    margin: 1rem;
+  }
+}
